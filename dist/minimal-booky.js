@@ -2,8 +2,8 @@
 // @name         Minimal Booky
 // @namespace    http://booky.io/
 // @version      1.0
-// @updateURL    https://***.user.js
-// @downloadURL  https://***.user.js
+// @updateURL    https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js
+// @downloadURL  https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js
 // @description  Hide the header and footer on Booky.io by default, enable toggling it by clicking on the header
 // @author       Lawrence Bethlenfalvy <lbfalvy@protonmail.com>
 // @match        https://booky.io/
