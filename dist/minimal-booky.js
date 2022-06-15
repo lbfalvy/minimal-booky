@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Minimal Booky
 // @namespace    http://booky.io/
-// @version      2.0
+// @version      2.1
 // @updateURL    https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js
 // @downloadURL  https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js
 // @description  Hide the header and footer on Booky.io by default, enable toggling it by clicking on the header and extend search functionality
@@ -58,7 +58,7 @@
         document.body.addEventListener('keydown', e => {
             if (e.target !== search()) return;
             console.log('Search input');
-            if (!e.ctrlKey || e.key !== 'Enter') return;
+            if (e.key !== 'Enter') return;
             console.log('Accepted command');
             execCommand(search().value);
         });
