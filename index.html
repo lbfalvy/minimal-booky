@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Booky</title>
+    <style>
+        body {
+            background-color: #333340;
+            color: #eee;
+            margin: 0;
+            padding: 15px;
+            text-align: justify;
+        }
+        li {
+            margin-top: 10px;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        pre, code {
+            font-family: 'Source Code Pro', monospace;
+            color: #9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Turn booky.io into a powerful start page</h1>
+    <main>
+        <p>
+            <a href="https://booky.io">Booky.io</a> is my favourite bookmark manager, I turned it
+            into a start page for my browser using a tiny userscript. Since then, I'm occasionally
+            adding new features as I see fit, and I packaged the script here for my friends and the
+            wider public
+        </p>
+        <p>
+            The packaging format ensures that the script is easy to install and updates
+            automatically. It also guarantees that the author of a userscript doesn't have access
+            to other websites, as the header specifies which domains will load the script
+        </p>
+        <h2>Features</h2>
+        <ul>
+            <li>
+                Hide the header and footer. You can reveal them by clicking on the collection name
+            </li>
+            <li>
+                <p>
+                    Enhance the search bar; the vanilla Booky search bar reloads the results
+                    dynamically, so I repurposed the Enter key to go to the location written in the
+                    search field. If you start your query with a / character, Enter will take you to
+                    duckduckgo instead
+                </p>
+                <p>
+                    This is useful because extensions like New Tab Override can't properly clear or
+                    focus the address bar which makes it inconvenient to use. This way, Booky's address
+                    bar can be used the same way you would use the browser's
+                </p>
+            </li>
+        </ul>
+        <h2>Installation</h2>
+        <ol>
+            <li>
+                Set <code>https://booky.io</code> as your start page. Most browsers don't allow you to
+                specify a custom URL as a start page, if this is the case you'll need an extension
+                for this. For Firefox I use
+                <a href="https://addons.mozilla.org/firefox/addon/new-tab-override/">New Tab Override</a>
+            </li>
+            <li>
+                Get <a href="https://www.tampermonkey.net/">Tampermonkey</a> which enables you to run
+                userscripts. Once it's installed, open the <i>Dashboard</i> from Tampermonkey's
+                dropdown menu, then go to <i>Utilities</i> and find <i>Import from URL</i> at the very
+                bottom
+            </li>
+            <li>
+                <button onClick="navigator.clipboard.writeText('https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js'); this.innerText = 'Copied'">
+                    Copy
+                </button> and paste the following URL into the textbox and click Install:
+                <pre>https://lbfalvy.github.io/minimal-booky/dist/minimal-booky.js</pre>
+            </li>
+        </ol>
+        <h2>About</h2>
+        <ul>
+            <li>
+                Report issues, request features, read the code and contribute
+                <a href="https://github.com/lbfalvy/minimal-booky">on Github</a>
+            </li>
+            <li>
+                Check out my other projects
+                <a href="https://lbfalvy.github.io">on my website</a>, where you can also support the
+                development of neat but worthless projects like this one
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
