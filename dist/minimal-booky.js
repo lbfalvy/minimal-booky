@@ -52,8 +52,13 @@
         document.body.addEventListener('click', e => {
             if (e.target !== headline()) return;
             console.log('Toggling compact mode');
-            header().classList.toggle('closed');
-            footer().classList.toggle('closed');
+            if (header().classList.contains('closed')) {
+                header().classList.remove('closed');
+                footer().classList.remove('closed');
+            } else {
+                header().classList.add('closed');
+                footer().classList.add('closed');
+            }
         });
         document.body.addEventListener('keydown', e => {
             if (e.target !== search()) return;
